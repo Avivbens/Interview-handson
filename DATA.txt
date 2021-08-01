@@ -1,0 +1,13 @@
+seat (Object) {
+    _id: (use makeId),
+    pos (Object): 
+        {
+            col (Number): ...,
+            row (Number): ...
+        }
+    type (String): 'available' / 'select' / 'sold',
+    price (Number): ...,
+} 
+
+
+if there is no seat - send null
