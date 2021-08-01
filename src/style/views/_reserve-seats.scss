@@ -1,8 +1,15 @@
 .reserve-seats {
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
-    gap: 5px;
     align-items: center;
+
     background-color: black;
-    height: 400px;
+    gap: 5px;
+
+    > .screen {
+        width: 600px;
+        height: 40px;
+        background-color: red;
+    }
 }

@@ -1,3 +1,4 @@
+import { theater_01 } from "@/data/seat-map.js"
 import { storageService } from "./async-storage.service.js"
 
 const SEAT_KEY = 'stadium'
@@ -10,14 +11,14 @@ export const seatService = {
 }
 
 async function getById(stadiumId) {
-    stadium = await storageService.getById(SEAT_KEY, stadiumId)
+    stadium = await storageService.get(SEAT_KEY, stadiumId)
     stadium ??= _createStadium()
     return stadium
 }
 
-async function getSeatByPos(pos) {
+function getSeatByPos(pos) {
     const { col, row } = pos
-    return stadium[col][row]
+    return stadium.seats[row][col]
 }
 
 async function selectSeatByPos(pos) {
@@ -35,5 +36,5 @@ function _saveStadium() {
 }
 
 function _createStadium() {
-    return [[]]
+    return theater_01 || [[]]
 }

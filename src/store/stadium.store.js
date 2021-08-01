@@ -1,4 +1,4 @@
-import { seatService } from "../services/seat.service"
+import { seatService } from "../services/stadium.service"
 
 export default {
     strict: true,
@@ -7,12 +7,12 @@ export default {
     },
     getters: {
         currStadium(state) {
-            return state.currStadium
-        }
+            return JSON.parse(JSON.stringify(state.currStadium))
+        },
     },
     mutations: {
         setCurrStadium(state, { stadium }) {
-            state.currStadium = stadium
+            state.currStadium = JSON.parse(JSON.stringify(stadium))
         },
     },
     actions: {

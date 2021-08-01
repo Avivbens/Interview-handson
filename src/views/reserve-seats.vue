@@ -1,8 +1,7 @@
 <template>
 	<main class="reserve-seats">
-
-		<div class="screen"></div>
 		<seat-map :seats="seats" />
+		<div class="screen"></div>
 		<section class="map-reader"></section>
 	</main>
 </template>
@@ -12,14 +11,10 @@ import seatMap from '@/cmps/seat-map.vue'
 
 export default {
 	name: 'reserve-seats',
-	// props: {
-	// 	seats: Array
-	// },
-
 	computed: {
 		seats() {
-			return this.$store.getters.currStadium?.seats || 
-			[{
+			return this.$store.getters.currStadium?.seats ||
+				[[{
 					_id: '',
 					pos: {
 						row: 4,
@@ -37,7 +32,8 @@ export default {
 					type: 'available',
 					price: 55,
 				},
-				{
+				],
+				[{
 					_id: '',
 					pos: {
 						row: 6,
@@ -55,10 +51,11 @@ export default {
 					type: 'available',
 					price: 55,
 				}]
+				]
 		}
 	},
 	created() {
-		const { stadiumId } = this.$route.params
+		const stadiumId = this.$route.params.stadiumId || '101'
 		this.$store.dispatch({ type: 'setCurrStadium', stadiumId })
 	},
 	components: {

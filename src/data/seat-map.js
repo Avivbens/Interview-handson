@@ -1,6 +1,6 @@
-const theater_01 = {
-    _id = '101',
-    map: [
+export const theater_01 = {
+    _id: '101',
+    seats: [
         [
             null,
             null,
@@ -1316,50 +1316,50 @@ const theater_01 = {
             },
         ],
         [{
-                _id: '',
-                pos: {
-                    row: 7,
-                    col: 0,
-                },
-                type: 'available',
-                price: 55,
+            _id: '',
+            pos: {
+                row: 7,
+                col: 0,
             },
-            {
-                _id: '',
-                pos: {
-                    row: 7,
-                    col: 1,
-                },
-                type: 'available',
-                price: 55,
+            type: 'available',
+            price: 55,
+        },
+        {
+            _id: '',
+            pos: {
+                row: 7,
+                col: 1,
             },
-            {
-                _id: '',
-                pos: {
-                    row: 7,
-                    col: 2,
-                },
-                type: 'available',
-                price: 60,
+            type: 'available',
+            price: 55,
+        },
+        {
+            _id: '',
+            pos: {
+                row: 7,
+                col: 2,
             },
-            {
-                _id: '',
-                pos: {
-                    row: 7,
-                    col: 3,
-                },
-                type: 'available',
-                price: 55,
+            type: 'available',
+            price: 60,
+        },
+        {
+            _id: '',
+            pos: {
+                row: 7,
+                col: 3,
             },
-            {
-                _id: '',
-                pos: {
-                    row: 7,
-                    col: 4,
-                },
-                type: 'available',
-                price: 55,
+            type: 'available',
+            price: 55,
+        },
+        {
+            _id: '',
+            pos: {
+                row: 7,
+                col: 4,
             },
+            type: 'available',
+            price: 55,
+        },
             null,
             null,
             null,
@@ -1376,69 +1376,69 @@ const theater_01 = {
             null,
             null,
             null,
-            {
-                _id: '',
-                pos: {
-                    row: 7,
-                    col: 21,
-                },
-                type: 'available',
-                price: 55,
+        {
+            _id: '',
+            pos: {
+                row: 7,
+                col: 21,
             },
-            {
-                _id: '',
-                pos: {
-                    row: 7,
-                    col: 22,
-                },
-                type: 'available',
-                price: 55,
+            type: 'available',
+            price: 55,
+        },
+        {
+            _id: '',
+            pos: {
+                row: 7,
+                col: 22,
             },
-            {
-                _id: '',
-                pos: {
-                    row: 7,
-                    col: 23,
-                },
-                type: 'available',
-                price: 55,
+            type: 'available',
+            price: 55,
+        },
+        {
+            _id: '',
+            pos: {
+                row: 7,
+                col: 23,
             },
-            {
-                _id: '',
-                pos: {
-                    row: 7,
-                    col: 24,
-                },
-                type: 'available',
-                price: 55,
+            type: 'available',
+            price: 55,
+        },
+        {
+            _id: '',
+            pos: {
+                row: 7,
+                col: 24,
             },
-            {
-                _id: '',
-                pos: {
-                    row: 7,
-                    col: 25,
-                },
-                type: 'available',
-                price: 55,
+            type: 'available',
+            price: 55,
+        },
+        {
+            _id: '',
+            pos: {
+                row: 7,
+                col: 25,
             },
-            {
-                _id: '',
-                pos: {
-                    row: 7,
-                    col: 26,
-                },
-                type: 'available',
-                price: 55,
+            type: 'available',
+            price: 55,
+        },
+        {
+            _id: '',
+            pos: {
+                row: 7,
+                col: 26,
             },
-            {
-                _id: '',
-                pos: {
-                    row: 7,
-                    col: 27,
-                },
-                type: 'available',
-                price: 55,
+            type: 'available',
+            price: 55,
+        },
+        {
+            _id: '',
+            pos: {
+                row: 7,
+                col: 27,
             },
+            type: 'available',
+            price: 55,
+        },
         ],
         [
             null,
