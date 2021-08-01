@@ -1,3 +1,5 @@
+import { seatService } from "../services/seat.service"
+
 export default {
     strict: true,
     state: {
@@ -9,14 +11,23 @@ export default {
         }
     },
     mutations: {
-        setCurrStadium(state, { stadiumId }) {
-            // TODO set stadium
-        }
+        setCurrStadium(state, { stadium }) {
+            state.currStadium = stadium
+        },
     },
     actions: {
-        setCurrStadium({ commit }, payload) {
-            // TODO get from service by ID
-            commit(payload)
-        }
+        async setCurrStadium({ commit }, { stadiumId }) {
+            const stadium = await seatService.getById(stadiumId)
+            commit({ type: 'setCurrStadium', stadium })
+        },
+
+        async selectSeat({ commit }, { pos }) {
+            try {
+                const stadium = await seatService.selectSeatByPos(pos)
+                commit({ type: 'setCurrStadium', stadium })
+            } catch (error) {
+                console.log('Unable to select seat!')
+            }
+        },
     },
 }
