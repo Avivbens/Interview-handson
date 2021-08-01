@@ -1,15 +1,18 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import stadiumStore from './stadium.store.js'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+    strict: true,
+    state: {
+    },
+    mutations: {
+    },
+    actions: {
+    },
+    modules: {
+        stadiumStore
+    }
 })
