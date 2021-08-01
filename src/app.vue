@@ -2,11 +2,21 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/reserve"> Seats </router-link>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+import seatMap from './cmps/seat-map.vue'
+export default {
+  components: {
+    seatMap
+  }
+}
+</script>
 
 <style>
 #app {
