@@ -1,5 +1,4 @@
-import { socketService, SOCKET_EVENT_REVIEW_ADDED } from '../services/socket.service'
-
+// import { socketService, SOCKET_EVENT_REVIEW_ADDED } from '../services/socket.service'
 
 export const storageService = {
     query,
@@ -19,6 +18,7 @@ function get(entityType, entityId) {
     return query(entityType)
         .then(entities => entities.find(entity => entity._id === entityId))
 }
+
 function post(entityType, newEntity) {
     newEntity._id = _makeId()
     return query(entityType)
@@ -31,7 +31,7 @@ function post(entityType, newEntity) {
 function postMany(entityType, newEntities) {
     return query(entityType)
         .then(entities => {
-            newEntities = newEntities.map(entity => ({...entity, _id: _makeId()}))
+            newEntities = newEntities.map(entity => ({ ...entity, _id: _makeId() }))
             entities.push(...newEntities)
             _save(entityType, entities)
             return newEntity
@@ -74,4 +74,3 @@ function _makeId(length = 5) {
 }
 
 
-  
